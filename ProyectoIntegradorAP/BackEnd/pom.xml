@@ -12,9 +12,9 @@
 	<artifactId>SasaSardella</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SasaSardella</name>
-	<description>Portfolio de Sabrina Sardella realizado en Argentina Programa</description>
+	<description>Portfolio de Sabrina Sardella</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

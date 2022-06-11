@@ -8,23 +8,23 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
-import static org.apache.coyote.http11.Constants.a;
+
 @Getter @Setter
 @Entity
-public class Pesona {
+public class Persona {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-   private Long id;
+    private Long id;
     
     @NotNull
-    @Size (min = a, max = 50, message = "No cumple con la longitud")
-   private String Nombre;
+    @Size (min = 1, max = 50, message = "no cumple con la longitud")
+    private String nombre;
     
-     @NotNull
-    @Size (min = a, max = 50, message = "No cumple con la longitud")
-   private String Apellido;
-     
-    @Size (min = a, max = 50, message = "No cumple con la longitud")
-   private String img;   
+    @NotNull
+    @Size (min = 1, max = 50, message = "no cumple con la longitud")
+    private String apellido;
+    
+    @Size (min = 1, max = 50, message = "no cumple con la longitud")
+    private String img;
 
 }
