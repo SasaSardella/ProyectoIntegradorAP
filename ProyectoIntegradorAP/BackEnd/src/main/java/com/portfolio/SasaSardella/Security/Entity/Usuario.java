@@ -1,8 +1,10 @@
 package com.portfolio.SasaSardella.Security.Entity;
 
 import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,12 +27,12 @@ public class Usuario {
     private String email;
     @NotNull
     private String password;
-    @ManyToMany(fetch = fetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name ="usuario_id"), inverseJoinColumns = @JoinColumn(name ="rol_id"))
     private Set<Rol> roles = new HashSet<>();
     
-    //Constructores
-
+    //Constructor
+    
     public Usuario() {
     }
 
@@ -40,8 +42,7 @@ public class Usuario {
         this.email = email;
         this.password = password;
     }
-    
-    //Getter y Setters
+   // Getter and Setter
 
     public int getId() {
         return id;
@@ -83,13 +84,14 @@ public class Usuario {
         this.password = password;
     }
 
-    public <any> getRoles() {
+    public Set<Rol> getRoles() {
         return roles;
     }
 
-    public void setRoles(<any> roles) {
+    public void setRoles(Set<Rol> roles) {
         this.roles = roles;
     }
     
+  
     
 }
