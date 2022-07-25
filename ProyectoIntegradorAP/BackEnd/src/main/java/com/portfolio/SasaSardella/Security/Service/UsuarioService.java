@@ -15,7 +15,7 @@ public class UsuarioService {
     iUsuarioRepository iusuarioRepository;   
     
     public Optional<Usuario>getByNombreUsuario(String nombreUsuario){
-        return iusuarioRepository.findByNonbreUsuario(nombreUsuario);
+        return iusuarioRepository.findByNombreUsuario(nombreUsuario);
     }
     
     public boolean existsByNombreUsuario (String nombreUsuario){
