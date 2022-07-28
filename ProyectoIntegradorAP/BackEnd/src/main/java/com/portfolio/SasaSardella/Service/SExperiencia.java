@@ -42,6 +42,10 @@ public class SExperiencia {
      public boolean existsByNombreE(String nombreE){
          return rExperiencia.existsByNombreE(nombreE);
      }
+
+    public void delete(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 } 
 
 
