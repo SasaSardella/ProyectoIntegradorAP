@@ -1,24 +1,23 @@
 <div class="row">
     <h1>Experiencia laboral</h1>
-    <div class="col-lg-1"></div>
+    <div class="col-lg-2">
+        <button type="button" >
+
+        </button>
+    </div>
+
+    <div class="col.lg.1"></div>
     <div class="col-lg-11">
-       <ul>
-           <li>
-               <h1>Especialista en SEO</h1> - <h3>(2019-2022)</h3>
-           </li>
-           <p>Analizar y optimizar el contenido de diferentes paginas web para lograr un posicionamiento organico en distintos motores de busqueda, en especial Google. Además de trazar estrategias para mantener ese posicionamiento o mejorarlo</p>
-       </ul>
-       <ul>
-        <li>
-            <h1>Operadora de radio</h1> - <h3>(2006-2021)</h3>
-        </li>
-        <p>Encargada técnica de la puesta al aire de los enviós de diferentes emisoras radiales de la ciudad de Mar del Plata. Una de mis funciones principales era garantizar el normal funcionamiento de los diferentes equipos y de encontrar la solución, en caso de encontrar dificultades, en el menor tiempo posible para que no afecte el normal funcionamiento de las emisoras.</p>
-    </ul>
-    <ul>
-        <li>
-            <h1>Productora periodística</h1> - <h3>(2009-2020)</h3>
-        </li>
-        <p>Encargada de pactar y gestionar entrevistas a personalidades políticas y artísticas del ámbito local y nacional para diferentes programas radiales y televisivos. Pautar y coordinar la realización de los envíos para cumplir con los diferentes tipos de compromisos asumidos. </p>
-    </ul>
-</div>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of expe">
+                    <td>{{Experiencia.nombreE}}</td>
+                    <td>{{Experiencia.descripcionE}}</td>
+                    <td>EDITAR</td>
+                    <td>BORRAR</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
 </div>
