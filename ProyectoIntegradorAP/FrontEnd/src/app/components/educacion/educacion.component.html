@@ -1,30 +1,31 @@
 <div class="row">
     <h1>Educación</h1>
-    <div class="col-lg-1"></div>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+            Agregar Educacion
+        </button>
+    </div>
+
+    <div class="col lg 1"></div>
     <div class="col-lg-11">
-       <ul>
-           <li>
-               <h1>Profesora en Comunicación Social</h1> - <h3>(julio 2022)</h3>
-           </li>
-           <p>Titulo otorgado por la Facultad de Periodismo y Comunicación Social de la Universidad Nacional de la Plata. El tramo de formación pedagogica fue realizado integramente de manera on-line.</p>
-       </ul>
-       <ul>
-        <li>
-            <h1>Licenciada en Comunicación Social</h1> - <h3>(2023)</h3>
-        </li>
-        <p>Titulo otorgado por la Facultad de Periodismo y Comunicación Social de la Universidad Nacional de la Plata. Actualmente me encuentro en período de tesis la cual es una investigación sobre la ciencia de datos en el ámbito de la comunicación</p>
-    </ul>
-    <ul>
-        <li>
-            <h1>full Stack Developer Jr.</h1> - <h3>(mayo 2022)</h3>
-        </li>
-        <p>Capacitación otorgada en el marco del proyecto Argentina Programa y que tiene como trabajo final la realización del presente porfolio</p>
-    </ul>
-    <ul>
-        <li>
-            <h1>Introducción al testing manual</h1> - <h3>(julio 2022)</h3>
-        </li>
-        <p>Curso de cuatro meses de duración y brindado por especialistas en QA y testing manual de la organización de Transistemas.</p>
-    </ul>
-</div>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <h2>{{Educacion.nombreE}}</h2>
+                    </td>
+                    <td>{{Educacion.descripcionE}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>
